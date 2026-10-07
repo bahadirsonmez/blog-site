@@ -1,0 +1,19 @@
+{
+  "name": "blog-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Blog at blog.bahadirsonmez.com",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "eleventy --input=src --output=_site",
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-rss": "^3.1.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2"
+  }
+}
