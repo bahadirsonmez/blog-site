@@ -1,0 +1,23 @@
+---
+layout: base.njk
+---
+<article>
+  <header>
+    <h1>{{ title }}</h1>
+    <p class="meta"><time datetime="{{ page.date | isoDate }}">{{ page.date | humanDate }}</time> · {{ content | readingTime }} min read</p>
+    {% if tags %}<p class="tags">{% for tag in tags %}<a href="/tags/{{ tag | slugify }}/">#{{ tag }}</a>{% endfor %}</p>{% endif %}
+  </header>
+  {{ content | safe }}
+</article>
+{% set app = apps[cta_app] %}
+{% if app %}
+<aside class="cta">
+  <p class="meta">From the same workshop</p>
+  <h2><a href="{{ app.url }}">{{ app.name }}</a></h2>
+  <p>{{ app.blurb }}</p>
+</aside>
+{% endif %}
+<aside class="author-box">
+  <p><strong>{{ site.author }}</strong> is an iOS software engineer building independent Apple-platform apps.
+  <a href="{{ site.mainUrl }}/">See the apps at bahadirsonmez.com</a>.</p>
+</aside>
