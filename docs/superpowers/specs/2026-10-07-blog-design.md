@@ -2,7 +2,7 @@
 
 - **Date:** 2026-10-07
 - **Owner / reviewer:** Bahadır Sönmez
-- **Status:** Awaiting owner review
+- **Status:** Implemented 2026-10-08 (blog live at https://blog.bahadirsonmez.com)
 
 ## 1. Purpose and success criteria
 
@@ -95,7 +95,7 @@ Sources
 
 ## 6. Routine (scheduled task)
 
-- **Schedule:** Monday–Thursday, 09:00 Turkey time. No Friday or weekend runs.
+- **Schedule:** Monday–Thursday, 09:00 Berlin time (the Mac's local time; owner-confirmed). No Friday or weekend runs.
 - **Publish target:** draft day + 1 at 15:00 Turkey time (≈08:00 ET, 14:00 CEST). This gives Bahadır about 30 hours to review.
 - **Weekly cap:** 2 drafts per week (Mon–Sun), tracked in `topics.md`.
 
