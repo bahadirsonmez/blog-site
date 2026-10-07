@@ -2,7 +2,7 @@
 
 Default topics for weeks without important news. Edit freely; the routine ticks a topic when it drafts it.
 
-- [ ] SwiftUI: three view-composition habits that keep large screens readable
+- [x] SwiftUI: three view-composition habits that keep large screens readable
 - [ ] SwiftUI: when `@Observable` replaces `ObservableObject`, and what breaks
 - [ ] Swift Concurrency: moving a callback-based API to async/await without data races
 - [ ] Swift Concurrency: `MainActor` isolation mistakes that only show up in production

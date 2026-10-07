@@ -4,3 +4,4 @@ One row per routine run that drafts or skips. Weeks start on Monday. The weekly 
 
 | Week (Mon date) | Draft date | Slug | Trigger (news/backlog) | Status (drafted/published/skipped) |
 |---|---|---|---|---|
+| 2026-10-05 | 2026-10-08 | swiftui-view-composition-habits | backlog | drafted |
