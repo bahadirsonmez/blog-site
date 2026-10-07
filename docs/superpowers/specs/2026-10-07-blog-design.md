@@ -69,7 +69,7 @@ Drafts live outside `src/`, so they can never be published by accident.
 
 ### Analytics
 
-Cloudflare Web Analytics beacon on every page. Token is a placeholder in the template until Bahadır creates the `blog.bahadirsonmez.com` site in the Cloudflare dashboard and provides the token.
+Cloudflare Web Analytics beacon on every page. The `blog.bahadirsonmez.com` site was created in the Cloudflare dashboard on 2026-10-07 (JS snippet mode, same as the other sites). Beacon token: `661cc751be2d43f98143d39de57e5410` (public value, appears in page HTML like the other sites' tokens).
 
 ### Out of scope (YAGNI)
 
@@ -136,8 +136,8 @@ Sources
 |---|---|
 | Create repo, scaffold Eleventy, templates, Actions workflow, `CNAME`; create GitHub repo and enable Pages | Claude |
 | DNS: add `blog` CNAME → `bahadirsonmez.github.io` at **checkdomain.de** (current nameservers; requires login) | Bahadır (Claude provides exact values) |
-| Cloudflare Web Analytics: create site for `blog.bahadirsonmez.com`, provide token | Bahadır (Claude can guide) |
-| Google Search Console: the root domain already has a `google-site-verification` TXT record, so a Domain property likely covers `blog.`; submit `https://blog.bahadirsonmez.com/sitemap.xml` | Bahadır, with Claude guiding or driving the browser with explicit approval |
+| Cloudflare Web Analytics: site for `blog.bahadirsonmez.com` | **Done 2026-10-07** (Claude, via browser, with owner approval; owner signed in) |
+| Google Search Console: property is `sc-domain:bahadirsonmez.com` (Domain property, verified), so `blog.` is covered. After the blog is live, submit `https://blog.bahadirsonmez.com/sitemap.xml` | Claude via browser with owner approval (owner signs in if needed) |
 | Enable "Enforce HTTPS" after DNS propagates; verify the site | Claude (after DNS resolves) |
 | Create the scheduled task | Claude, after the first post template is validated |
 | Update the main site's JSON-LD and add a link to the blog | Claude (change in the main-site repo, committed separately) |
@@ -154,6 +154,5 @@ Account logins, passwords and tokens are never entered by Claude.
 
 ## 9. Open items
 
-- Blog analytics token (Bahadır, from Cloudflare).
-- Confirm whether the Search Console property is a Domain property.
+- Submit the sitemap in Search Console once the blog is live.
 - First batch of backlog topics (Claude proposes, Bahadır edits).
