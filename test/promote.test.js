@@ -8,11 +8,11 @@ import { promote } from "../scripts/promote.js";
 const LINKEDIN = "Hook line one.\nHook line two.\nhttps://blog.bahadirsonmez.com/posts/demo/?utm_source=linkedin";
 const X = "Short post https://blog.bahadirsonmez.com/posts/demo/?utm_source=x";
 
-function draft({ status = "draft", marker = false, omit = "" } = {}) {
-  const fm = { title: "Demo post", description: "A demo.", date: "2026-10-12", tags: "[apple-dev]" };
+function draft({ status = "draft", marker = false, omit = "", quotedStatus = false, tags = "[apple-dev]" } = {}) {
+  const fm = { title: "Demo post", description: "A demo.", date: "2026-10-12", tags };
   const lines = ["---"];
   for (const [k, v] of Object.entries(fm)) if (k !== omit) lines.push(`${k}: ${k === "tags" ? v : JSON.stringify(v)}`);
-  lines.push(`status: ${status}`, "---", "", "## Why this topic", "Owner-only note.", "<!-- end why -->", "", "Opening paragraph.", "", "## Body heading", marker ? "[BAHADIR: what did you see?]" : "Body text.", "", "## Sources", "- [A](https://example.com)", "", "## LinkedIn", LINKEDIN, "", "## X", X, "");
+  lines.push(quotedStatus ? `status: "${status}"` : `status: ${status}`, "---", "", "## Why this topic", "Owner-only note.", "<!-- end why -->", "", "Opening paragraph.", "", "## Body heading", marker ? "[BAHADIR: what did you see?]" : "Body text.", "", "## Sources", "- [A](https://example.com)", "", "## LinkedIn", LINKEDIN, "", "## X", X, "");
   return lines.join("\n");
 }
 
@@ -49,11 +49,40 @@ test("promotes a clean draft", () => {
   assert.equal(res.social.x, X);
 });
 
-test("without an end marker the note runs to the next heading", () => {
-  const { file, opts } = setup(draft().replace("<!-- end why -->\n", ""));
+test("a missing end-why marker is refused, never silently dropping text", () => {
+  const { file, dirs, opts } = setup(draft().replace("<!-- end why -->\n", ""));
+  assert.throws(() => promote(file, opts), /end why/);
+  assert.ok(existsSync(file));
+  assert.deepEqual(readdirSync(dirs.posts), []);
+});
+
+test("an end-why marker with surrounding whitespace is accepted", () => {
+  const { file, opts } = setup(draft().replace("<!-- end why -->", "  <!-- end why -->  "));
   const post = readFileSync(promote(file, opts).postPath, "utf8");
-  assert.ok(!post.includes("Owner-only note.") && !post.includes("Opening paragraph."));
-  assert.ok(post.includes("## Body heading"));
+  assert.ok(post.includes("Opening paragraph.") && !post.includes("Owner-only note."));
+});
+
+test("a quoted status: \"draft\" is rewritten to ready", () => {
+  const { file, opts } = setup(draft({ quotedStatus: true }));
+  const post = readFileSync(promote(file, opts).postPath, "utf8");
+  assert.match(post, /^status: ready$/m);
+  assert.ok(!/draft/.test(post.split("---")[1]));
+});
+
+test("refuses tags that are not lowercase kebab-case", () => {
+  for (const tags of ["[SwiftUI]", "[c++]", "[apple dev]"]) {
+    const { file, dirs, opts } = setup(draft({ tags }));
+    assert.throws(() => promote(file, opts), /tag/i, tags);
+    assert.ok(existsSync(file));
+    assert.deepEqual(readdirSync(dirs.posts), []);
+  }
+});
+
+test("refuses a slug that already exists under another date", () => {
+  const { file, dirs, opts } = setup(draft());
+  writeFileSync(path.join(dirs.posts, "2026-10-05-demo.md"), "existing");
+  assert.throws(() => promote(file, opts), /slug/i);
+  assert.ok(existsSync(file));
 });
 
 test("refuses non-draft status or incomplete frontmatter", () => {

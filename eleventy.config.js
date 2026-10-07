@@ -38,7 +38,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
   return {
-    markdownTemplateEngine: "njk",
+    // Posts are plain markdown: `{{ }}`, `{% %}` and `{#` in code samples must stay literal.
+    markdownTemplateEngine: false,
     htmlTemplateEngine: "njk",
   };
 }
