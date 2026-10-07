@@ -9,7 +9,9 @@ cta_app: healthbar        # optional: ikeep | bubbles | ballance | healthbar. Re
 
 ## Why this topic
 
-Owner-only note, removed on promote. Say why this topic matters this week (or why it is an evergreen pick), which search question it answers, and which sources the claims rest on.
+Owner-only note, removed on promote. Say why this topic matters this week (or why it is an evergreen pick), which search question it answers, and which sources the claims rest on. Keep the end marker below: everything after it is the post.
+
+<!-- end why -->
 
 Opening paragraph of the post. State the one idea of the post in the first two sentences.
 
