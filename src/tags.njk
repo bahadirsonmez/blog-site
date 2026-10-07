@@ -1,0 +1,22 @@
+---
+layout: base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: "/tags/{{ tag | slugify }}/"
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: "Posts tagged {{ tag }}"
+---
+<h1>Posts tagged #{{ tag }}</h1>
+<ul class="post-list">
+{%- for post in collections.posts %}{% if tag in post.data.tags %}
+  <li>
+    <p class="meta"><time datetime="{{ post.date | isoDate }}">{{ post.date | humanDate }}</time></p>
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <p>{{ post.data.summary }}</p>
+  </li>
+{%- endif %}{% endfor %}
+</ul>
+<p><a href="/">← All posts</a></p>

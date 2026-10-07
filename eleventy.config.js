@@ -1,7 +1,12 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import rss from "@11ty/eleventy-plugin-rss";
+
+const isPublishedPost = (p) =>
+  p.data.status === "ready" && /[\\/]posts[\\/][^\\/]+\.md$/.test(p.inputPath);
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(rss);
   // Input is only `src`; the test harness builds from git-ignored temp dirs.
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addPassthroughCopy({
@@ -23,10 +28,10 @@ export default function (eleventyConfig) {
   );
   eleventyConfig.addFilter("isoDate", (d) => d.toISOString().slice(0, 10));
   eleventyConfig.addCollection("posts", (api) =>
-    api
-      .getAll()
-      .filter((p) => p.data.status === "ready" && /[\\/]posts[\\/][^\\/]+\.md$/.test(p.inputPath))
-      .sort((a, b) => b.date - a.date),
+    api.getAll().filter(isPublishedPost).sort((a, b) => b.date - a.date),
+  );
+  eleventyConfig.addCollection("tagList", (api) =>
+    [...new Set(api.getAll().filter(isPublishedPost).flatMap((p) => p.data.tags ?? []))].sort(),
   );
 
   eleventyConfig.addPassthroughCopy({ CNAME: "CNAME" });

@@ -1,4 +1,20 @@
 ---
 layout: base.njk
+description: Notes from an iOS engineer on Apple development, the Apple ecosystem and AI.
 ---
-<h1>Blog</h1>
+<h1>Notes on Apple development &amp; AI</h1>
+<p>Two posts a week on Swift, the Apple ecosystem and what AI changes for developers.</p>
+{% if collections.posts.length %}
+<ul class="post-list">
+{%- for post in collections.posts %}
+  <li>
+    <p class="meta"><time datetime="{{ post.date | isoDate }}">{{ post.date | humanDate }}</time></p>
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <p>{{ post.data.summary }}</p>
+    <p class="tags">{% for tag in post.data.tags %}<a href="/tags/{{ tag | slugify }}/">#{{ tag }}</a>{% endfor %}</p>
+  </li>
+{%- endfor %}
+</ul>
+{% else %}
+<p>The first post is coming soon.</p>
+{% endif %}
