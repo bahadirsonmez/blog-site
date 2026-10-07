@@ -55,7 +55,7 @@ Drafts live outside `src/`, so they can never be published by accident.
 
 ## 4. Site design
 
-- **Visual identity:** same as the main site — theme color `#160572`, Fraunces headings, Inter body, light/dark behavior matching `bahadirsonmez.com`. Single reading column, generous line height, syntax-highlighted code (Swift-first).
+- **Visual identity:** same as the main site — theme color `#160572`, Fraunces headings, Inter body, light theme only (the main site has no dark mode). Single reading column, generous line height, syntax-highlighted code (Swift-first).
 - **Pages:** home (latest posts: title, date, summary, tags); post page (title, date, reading time, content, sources, CTA, author box); tag pages (e.g. `apple-dev`, `apple-ecosystem`, `ai`); `/feed.xml`; sitemap; `robots.txt`; 404.
 - **Per-post metadata (automatic):** `<title>`, meta description, canonical URL, Open Graph, Twitter card. One shared share image initially; per-post images are out of scope.
 - **Structured data:** `Blog` + `BlogPosting` JSON-LD on the blog; the main site's JSON-LD is updated to reference the blog so search engines associate it with the same person.
@@ -79,7 +79,7 @@ Comments, newsletter, on-site search, per-post share images, other analytics, so
 
 1. The routine writes `drafts/YYYY-MM-DD-slug.md` with `status: draft`.
 2. Bahadır edits the draft and tells Claude it is ready.
-3. Claude checks there are no `[BAHADIR: ...]` markers left, sets `status: ready`, moves the post to `src/posts/`, commits and pushes.
+3. Claude runs `scripts/promote.js`: it refuses if `[BAHADIR: ...]` markers remain, sets `status: ready`, writes the post (without the "why this topic" note and the social sections) to `src/posts/`, archives the full draft to `drafts/published/`, and prints the LinkedIn/X text. Claude then commits and pushes.
 4. GitHub Actions builds and deploys. Bahadır posts the LinkedIn/X text himself at the scheduled time.
 
 **Draft file format**
