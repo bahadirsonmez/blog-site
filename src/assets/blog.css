@@ -2,11 +2,11 @@
   --indigo:#160572;--cream:#f2ebe6;--white:#fff;--slate:#2c2c2c;--cobalt:#2544a0;--rose:#d98199;
   --serif:"Fraunces","Playfair Display",Georgia,"Times New Roman",serif;
   --sans:"Inter",ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --gutter:clamp(1.25rem,4vw,2.75rem);--read:clamp(42.5rem,58vw,54rem);
+  --gutter:clamp(1.25rem,4vw,2.75rem);--read:clamp(42.5rem,86vw,75rem);
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--cream);color:var(--slate);font:400 clamp(1.0625rem,.95rem + .35vw,1.3rem)/1.7 var(--sans)}
+body{margin:0;background:var(--cream);color:var(--slate);font:400 clamp(1.0625rem,.95rem + .5vw,1.4rem)/1.7 var(--sans)}
 img,svg{max-width:100%;height:auto}
 a{color:var(--cobalt);text-underline-offset:.18em}
 a:hover{color:var(--indigo)}
@@ -21,8 +21,8 @@ a:hover{color:var(--indigo)}
 .site-nav a:hover{text-decoration:underline}
 main{padding-block:2rem 4rem}
 h1,h2,h3{font-family:var(--serif);color:var(--indigo);line-height:1.2}
-h1{font-size:clamp(2rem,5vw,3.25rem);margin:.4em 0}
-h2{font-size:clamp(1.5rem,1.2rem + .8vw,2rem);margin-top:2em}
+h1{font-size:clamp(2rem,5vw,3.75rem);margin:.4em 0}
+h2{font-size:clamp(1.5rem,1.2rem + .9vw,2.25rem);margin-top:2em}
 pre{overflow-x:auto;padding:1rem;border-radius:.5rem;background:var(--white);font-size:.9rem}
 code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 blockquote{margin:1.5rem 0;padding-left:1rem;border-left:3px solid var(--rose)}
