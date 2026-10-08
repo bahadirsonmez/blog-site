@@ -34,3 +34,8 @@ blockquote{margin:1.5rem 0;padding-left:1rem;border-left:3px solid var(--rose)}
 .tags a{display:inline-block;margin-right:.5rem;font-size:.85rem}
 .cta,.author-box{margin-top:3rem;padding:1.25rem 1.5rem;background:var(--white);border-radius:.75rem}
 .site-footer{padding-block:2rem 3rem;font-size:.9rem;color:#555}
+.post-pager{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem}
+.post-pager a{display:block;padding:1rem 1.25rem;background:var(--white);border-radius:.75rem;font:600 1.05em/1.35 var(--serif);color:var(--indigo);text-decoration:none;border:1px solid rgba(22,5,114,.12);transition:border-color .2s,transform .2s}
+.post-pager a:hover{border-color:var(--indigo);transform:translateY(-2px)}
+.post-pager .pager-newer{grid-column:2;text-align:right}
+@media (max-width:40rem){.post-pager{grid-template-columns:1fr}.post-pager .pager-newer{grid-column:1}}

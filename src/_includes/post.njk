@@ -21,3 +21,11 @@ layout: base.njk
   <p><strong>{{ site.author }}</strong> is an iOS software engineer building independent Apple-platform apps.
   <a href="{{ site.mainUrl }}/">See the apps at bahadirsonmez.com</a>.</p>
 </aside>
+{%- set newer = collections.posts | getPreviousCollectionItem(page) %}
+{%- set older = collections.posts | getNextCollectionItem(page) %}
+{% if older or newer %}
+<nav class="post-pager" aria-label="Other posts">
+  {% if older %}<a class="pager-older" rel="prev" href="{{ older.url }}"><span aria-hidden="true">←</span> {{ older.data.title }}</a>{% endif %}
+  {% if newer %}<a class="pager-newer" rel="next" href="{{ newer.url }}">{{ newer.data.title }} <span aria-hidden="true">→</span></a>{% endif %}
+</nav>
+{% endif %}
