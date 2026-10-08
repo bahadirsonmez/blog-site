@@ -39,3 +39,4 @@ blockquote{margin:1.5rem 0;padding-left:1rem;border-left:3px solid var(--rose)}
 .post-pager a:hover{border-color:var(--indigo);transform:translateY(-2px)}
 .post-pager .pager-newer{grid-column:2;text-align:right}
 @media (max-width:40rem){.post-pager{grid-template-columns:1fr}.post-pager .pager-newer{grid-column:1}}
+.medium-note{margin-top:2.5rem;padding-top:1rem;border-top:1px solid rgba(22,5,114,.15);font-size:.9em;color:#555}

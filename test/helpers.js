@@ -43,12 +43,13 @@ export async function captureConfig() {
   return { filters, collections };
 }
 
-export function post({ title = "Hello", description, date = "2026-10-12", tags = ["apple-dev"], status = "ready", cta_app, words = 500 } = {}) {
+export function post({ title = "Hello", description, date = "2026-10-12", tags = ["apple-dev"], status = "ready", cta_app, words = 500, extra = [] } = {}) {
   const q = (v) => `'${String(v).replace(/'/g, "''")}'`;
   const lines = ["---", `title: ${q(title)}`];
   if (description !== undefined) lines.push(`description: ${q(description)}`);
   lines.push(`date: ${date}`, `tags: [${tags.join(", ")}]`, `status: ${status}`);
   if (cta_app) lines.push(`cta_app: ${cta_app}`);
+  lines.push(...extra);
   lines.push("---", "", "word ".repeat(words), "");
   return lines.join("\n");
 }

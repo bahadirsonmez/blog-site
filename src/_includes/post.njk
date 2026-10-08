@@ -8,6 +8,7 @@ layout: base.njk
     {% if tags %}<p class="tags">{% for tag in tags %}<a href="/tags/{{ tag | slugify }}/">#{{ tag }}</a>{% endfor %}</p>{% endif %}
   </header>
   {{ content | safe }}
+  {% if medium_url %}<p class="medium-note">Originally published {% if medium_publication %}in {{ medium_publication }} {% endif %}on <a href="{{ medium_url }}" rel="noopener">Medium</a>.</p>{% endif %}
 </article>
 {% set app = apps[cta_app] %}
 {% if app %}
