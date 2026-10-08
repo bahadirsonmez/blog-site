@@ -1,7 +1,7 @@
 ---
 title: "Three SwiftUI habits that keep large screens readable"
 description: "Small data-driven views, modifiers for repeated styling, and state kept close to where it is used: three habits for SwiftUI screens that stay readable."
-date: 2026-10-08
+date: 2026-10-07
 tags: [apple-dev, swiftui]
 status: draft
 ---
@@ -42,8 +42,6 @@ ForEach(workouts) { workout in
 ```
 
 The row takes two plain values rather than the whole `Workout`. It is easy to preview with made-up numbers, and it cannot quietly start depending on a property you did not mean to show. The WWDC sessions on how SwiftUI works ([Demystify SwiftUI](https://developer.apple.com/videos/play/wwdc2021/10022/) and [Demystify SwiftUI performance](https://developer.apple.com/videos/play/wwdc2023/10160/)) describe a view's body as a function of the things it depends on. My reading is that a view which takes two values depends on those two values, and nothing else, which is a good property to have.
-
-[BAHADIR: Name one screen in your own apps (iKeep, Bubbles, Ballance or HealthBar) where you split a view this way, and what got easier. One or two sentences, or delete this marker.]
 
 ## 2. Name repeated styling with a modifier
 
@@ -110,8 +108,6 @@ struct FilterField: View {
 Typing now changes state inside `FilterField` only, and the screen hears about it when the user submits. Apple's guide to [managing model data in your app](https://developer.apple.com/documentation/swiftui/managing-model-data-in-your-app) is the place to decide where each kind of state should live: view-local `@State` for transient UI details, and shared models for data several views read.
 
 The second half of this habit is keeping `body` cheap. Sorting, filtering and formatting belong in your model or in a value you compute once, not inside the view builder where they can run on every update. The performance session above makes the same point about keeping work out of `body`.
-
-[BAHADIR: Did moving state down ever fix something you could see, such as lag or extra redraws? If not, delete this marker.]
 
 ## A short checklist
 

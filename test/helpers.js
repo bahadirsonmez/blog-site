@@ -12,7 +12,8 @@ export async function buildSite(extraPosts = {}) {
   const root = mkdtempSync(path.join(TMP_BASE, "build-"));
   const input = path.join(root, "src");
   const outDir = path.join(root, "out");
-  cpSync("src", input, { recursive: true });
+  // Real posts must not leak into fixtures; keep posts.11tydata.js only.
+  cpSync("src", input, { recursive: true, filter: (s) => !/src\/posts\/.*\.md$/.test(s) });
   mkdirSync(path.join(input, "posts"), { recursive: true });
   for (const [name, markdown] of Object.entries(extraPosts)) {
     writeFileSync(path.join(input, "posts", name), markdown);
