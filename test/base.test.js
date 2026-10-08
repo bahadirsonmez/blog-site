@@ -50,3 +50,8 @@ test("jsonScript escapes <, > and &", () => {
   assert.ok(!/[<>&]/.test(out));
   assert.equal(JSON.parse(out).t, "</script><b>&");
 });
+
+test("long unbroken identifiers wrap instead of overflowing small screens", async () => {
+  const s = await buildSite();
+  assert.match(s.read("assets/blog.css"), /main\{[^}]*overflow-wrap:break-word/);
+});
