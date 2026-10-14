@@ -6,3 +6,6 @@ One row per routine run that drafts or skips. Weeks start on Monday. The weekly 
 |---|---|---|---|---|
 | 2026-10-05 | 2026-10-07 | swiftui-view-composition-habits | backlog | drafted |
 | 2026-10-05 | 2026-10-08 | prepare-your-app-for-iphone-duo | news | drafted |
+| 2026-10-12 | - | - | no-news | skipped |
+| 2026-10-12 | - | - | no-news | skipped |
+| 2026-10-12 | 2026-10-15 | observable-vs-observableobject | backlog | drafted |
