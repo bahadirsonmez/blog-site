@@ -8,6 +8,8 @@ status: ready
 
 Large SwiftUI screens go wrong in a predictable way: one `body` that runs for 200 lines, conditionals nested three levels deep, and every piece of state declared at the top. Nothing is broken, but nobody wants to touch it. Three habits keep that from happening, and none of them needs a framework or a new architecture.
 
+<figure><img src="/assets/posts/swiftui-view-composition-habits/img-1.jpg" alt="An open MacBook Pro with code in an editor, next to a stack of notebooks in afternoon light" loading="lazy"><figcaption>Photo by <a href="https://unsplash.com/@emilep?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Emile Perron</a> on&nbsp;<a href="https://unsplash.com/?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Unsplash</a></figcaption></figure>
+
 ## 1. Split views by data, not by layout
 
 The tempting way to break up a big view is by position: `headerView`, `middleSection`, `footerView`, each a computed property on the same struct. That makes the file shorter, but the pieces still share one `body` and one set of dependencies.

@@ -8,6 +8,8 @@ status: ready
 
 iPhone Duo reaches customers on October 23, 2026, and Apple's guidance for developers comes down to one idea: on this device, nothing about the screen tells you the shape of your app. Orientation, idiom and screen bounds can all mislead you, so layout has to follow the space your view is actually given.
 
+<figure><img src="/assets/posts/prepare-your-app-for-iphone-duo/img-1.jpg" alt="A person holding a half-open foldable phone" loading="lazy"><figcaption>Photo by <a href="https://unsplash.com/@jonasleupe?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Jonas Leupe</a> on&nbsp;<a href="https://unsplash.com/?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Unsplash</a></figcaption></figure>
+
 ## What happens if you do nothing
 
 Apple says every app will run on iPhone Duo, but what it looks like depends on the SDK you build with.

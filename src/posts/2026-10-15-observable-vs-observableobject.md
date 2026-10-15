@@ -8,6 +8,8 @@ status: ready
 
 If your SwiftUI app targets iOS 17 or macOS 14 and later, `@Observable` can replace `ObservableObject` in most places. The code gets shorter, and views refresh based on the properties they actually read instead of on any change to the model. The migration is mostly mechanical, but a few spots deserve a second look.
 
+<figure><img src="/assets/posts/observable-vs-observableobject/img-1.jpg" alt="A MacBook Pro screen showing code in a dark editor theme" loading="lazy"><figcaption>Photo by <a href="https://unsplash.com/@clark_fransa?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Arnold Francisca</a> on&nbsp;<a href="https://unsplash.com/?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Unsplash</a></figcaption></figure>
+
 ## What actually changes
 
 With `ObservableObject`, you mark each property you care about with `@Published`. Any change to one of those properties fires the object's `objectWillChange`, and every view observing that object is invalidated, even if it only reads a different property.
