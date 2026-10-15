@@ -75,8 +75,6 @@ func hasActiveSubscription(in groupID: String) async -> Bool {
 
 This is my own sketch, not Apple's sample, and it only uses APIs that existed before iOS 27. What I could not find is Apple documentation that names the new seat-related fields in StoreKit or the App Store Server API. The session says there are new App Store Server API endpoints for group management (finding the groups a customer belongs to and the members of a group), and for custom invitation systems. If your access logic lives on a server keyed to the original purchaser, read those docs before winter, when Group Purchases arrives.
 
-I don't sell a subscription that is opted in to multiseat.
-
 ## My short checklist
 
 1. Accept the updated license agreement and read Schedules 2 and 3.
@@ -103,8 +101,6 @@ Apple turned multiseat purchases on by default for most StoreKit 2 subscriptions
 Two things worth knowing:
 - Check Purchase Options in App Store Connect. If you have no Family Sharing, you're most likely opted in.
 - Opting out later cancels Apple Business and School Manager subscribers at their next renewal.
-
-My own apps are not affected by this.
 
 Keeping multiseat on, or opting out? 👇
 
