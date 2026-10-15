@@ -8,6 +8,8 @@ status: ready
 
 If you sell an auto-renewable subscription with StoreKit 2, it can probably already be bought in bulk, because Apple turned multiseat purchases on by default. Volume Purchasing opens on October 22, 2026, so this week is a good time to decide whether you actually want that, and at what price.
 
+<figure><img src="/assets/posts/multiseat-subscriptions/img-1.jpg" alt="Four coworkers smiling around a laptop at a table" loading="lazy"><figcaption>Photo by <a href="https://unsplash.com/@judmackrill?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Jud Mackrill</a> on&nbsp;<a href="https://unsplash.com/?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Unsplash</a></figcaption></figure>
+
 ## What changed
 
 Apple announced two ways to sell one subscription to many people at WWDC26 and set the dates in a news post on September 16:
@@ -18,6 +20,8 @@ Apple announced two ways to sell one subscription to many people at WWDC26 and s
 On October 13, Apple updated the Developer Program License Agreement. Among other changes, it adds terms for offering multiple seats through Group Purchases (Schedule 2) and for offering subscriptions to Apple Business and Apple School Manager organizations through Volume Purchasing (Schedule 3). You have to sign in and accept the new terms, so it is worth reading those schedules while you are there.
 
 ## Am I opted in?
+
+<figure><img src="/assets/posts/multiseat-subscriptions/img-2.jpg" alt="A stack of iPads in rugged school cases, one with a sticky note on its screen" loading="lazy"><figcaption>Photo by <a href="https://unsplash.com/@artlambi?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Arthur Lambillotte</a> on&nbsp;<a href="https://unsplash.com/?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Unsplash</a></figcaption></figure>
 
 Apple's App Store Connect help page is clear about the defaults:
 
@@ -47,6 +51,8 @@ By default every seat sells at your current price. In session 391, Apple shows *
 Price increases also work differently for groups. According to Apple's pricing help page, the first seat follows the normal consent rules. Beyond the first seat, consent is needed if the group purchaser's total price goes up by more than 50%, or if they are in a country or region that needs consent for any increase. If the purchaser doesn't consent in time, **the entire subscription expires, including all seats**. One missed consent prompt can now cancel a whole team, so I would be careful with price increases on subscriptions that sell to groups.
 
 ## What your code has to do
+
+<figure><img src="/assets/posts/multiseat-subscriptions/img-3.jpg" alt="A hand holding an iPhone with its home screen open" loading="lazy"><figcaption>Photo by <a href="https://unsplash.com/@jotform?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Jotform</a> on&nbsp;<a href="https://unsplash.com/?utm_source=bahadirsonmez_blog&amp;utm_medium=referral">Unsplash</a></figcaption></figure>
 
 Less than I expected. For Volume Purchasing, session 391 describes no purchase code at all: the organization buys outside your app, and your job is making the subscription available. For Group Purchases, you build the UI where the buyer picks a number of seats and pass that count into the StoreKit 2 purchase. Apple then creates the invite link, tracks who accepts, and handles cancellations.
 
