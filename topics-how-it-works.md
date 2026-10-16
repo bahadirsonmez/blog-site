@@ -3,7 +3,7 @@
 Seed topics for the daily "How it works" series. The routine picks the first unchecked item and ticks it when it drafts it. Add, reorder or delete freely. When the list runs out the routine invents new simple computing topics that are not covered yet.
 
 - [x] How DNS turns a name into an address
-- [ ] What happens when you type a URL and press Enter
+- [x] What happens when you type a URL and press Enter
 - [ ] How HTTPS keeps a connection private (the TLS handshake, simplified)
 - [ ] How a hash table finds things fast
 - [ ] How Git stores your commits
@@ -48,3 +48,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | Date | Slug | Status (drafted/published/skipped) |
 |---|---|---|
 | 2026-10-15 | how-dns-works | published |
+| 2026-10-17 | how-a-url-becomes-a-page | published |
