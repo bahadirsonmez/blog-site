@@ -49,5 +49,5 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 |---|---|---|
 | 2026-10-15 | how-dns-works | published |
 | 2026-10-17 | how-a-url-becomes-a-page | published |
-| 2026-10-19 | how-https-stays-private | published |
-| 2026-10-19 | how-hash-tables-find-things-fast | published |
+| 2026-10-17 | how-https-stays-private | published |
+| 2026-10-18 | how-hash-tables-find-things-fast | published |

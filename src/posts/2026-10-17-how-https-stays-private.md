@@ -1,7 +1,7 @@
 ---
 title: "How HTTPS keeps a connection private"
 description: "Before a page travels, browser and server agree on a secret key in a short handshake, the server proves who it is, and the rest is encrypted."
-date: 2026-10-19
+date: 2026-10-17
 tags: [how-it-works, security]
 status: ready
 ---

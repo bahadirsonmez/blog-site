@@ -1,10 +1,16 @@
 ---
 title: "How a hash table finds things fast"
 description: "A hash table turns the key into a number, uses that number as a position in an array, and jumps straight there instead of searching."
-date: 2026-10-19
+date: 2026-10-18
 tags: [how-it-works, data]
-status: ready
+status: draft
 ---
+
+## Why this topic
+
+Answers "why is a dictionary lookup fast no matter how big it gets". Claims rest on the CPython design FAQ (hash code, location in an internal array, constant time, mutable keys), the Java HashMap documentation (buckets, load factor, rehashing to twice the buckets, collisions slowing lookups) and the doc comments in Swift's Dictionary.swift (Dictionary is a hash table, keys must be Hashable, amortized O(1) lookup). Simplified on purpose: the number 42 and the 8-slot table in the diagram are made-up illustration values, collision handling is described as "compare a few keys" without naming chaining or linear probing, and the growth rule is given as "roughly twice the slots".
+
+<!-- end why -->
 
 A hash table is the structure behind Swift's `Dictionary`, Python's `dict` and Java's `HashMap`. The one idea to keep: it does not search for a key, it computes where the key must be.
 
