@@ -67,3 +67,27 @@ test("home has Blog JSON-LD referencing the main-site person", async () => {
   assert.equal(ld.url, "https://blog.bahadirsonmez.com/");
   assert.equal(ld.publisher["@id"], "https://bahadirsonmez.com/#person");
 });
+
+test("how-it-works explainers stay off the home list but are linked, tagged, in feed and sitemap", async () => {
+  const s = await buildSite({
+    "2026-10-13-essay.md": post({ title: "Long essay", date: "2026-10-13", tags: ["apple-dev"] }),
+    "2026-10-14-dns.md": post({ title: "How DNS works", date: "2026-10-14", tags: ["how-it-works"] }),
+    "2026-10-15-git.md": post({ title: "How Git stores commits", date: "2026-10-15", tags: ["how-it-works"] }),
+  });
+  const home = s.read("index.html");
+  assert.ok(home.includes("/posts/essay/"));
+  assert.ok(!home.includes("/posts/dns/") && !home.includes("/posts/git/"));
+  assert.ok(home.includes('href="/tags/how-it-works/"') && home.includes("(2)"));
+  const tag = s.read("tags/how-it-works/index.html");
+  assert.ok(tag.includes("/posts/dns/") && tag.includes("/posts/git/") && !tag.includes("/posts/essay/"));
+  assert.ok(s.read("feed.xml").includes("/posts/dns/"));
+  assert.ok(s.read("sitemap.xml").includes("/posts/git/"));
+  // The pager of an explainer only walks the explainers.
+  const nav = s.read("posts/git/index.html").match(/<nav class="post-pager"[\s\S]*?<\/nav>/)?.[0];
+  assert.ok(nav && nav.includes("/posts/dns/") && !nav.includes("/posts/essay/"));
+});
+
+test("home shows no explainer link while there are none", async () => {
+  const s = await buildSite({ "2026-10-13-essay.md": post({ title: "Long essay", date: "2026-10-13" }) });
+  assert.ok(!s.read("index.html").includes("how-it-works"));
+});

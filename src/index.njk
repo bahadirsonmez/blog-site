@@ -3,9 +3,12 @@ layout: base.njk
 description: Notes from an iOS engineer on Apple development, the Apple ecosystem and AI.
 ---
 <h1>Notes on my interests</h1>
-{% if collections.posts.length %}
+{% if collections.explainers.length %}
+<p class="series-link">Short explainers with diagrams: <a href="/tags/how-it-works/">How it works</a> ({{ collections.explainers.length }})</p>
+{% endif %}
+{% if collections.essays.length %}
 <ul class="post-list">
-{%- for post in collections.posts %}
+{%- for post in collections.essays %}
   <li>
     <p class="meta"><time datetime="{{ post.date | isoDate }}">{{ post.date | humanDate }}</time></p>
     <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>

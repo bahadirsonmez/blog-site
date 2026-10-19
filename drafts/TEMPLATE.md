@@ -4,7 +4,7 @@ description: "One sentence for search results and link previews, under 160 chara
 date: 2026-01-01          # publish date (run date + 1 day); must match the file name prefix
 tags: [apple-dev]         # lowercase-kebab; usual axes: apple-dev, apple-ecosystem, ai
 status: draft
-cta_app: healthbar        # optional: ikeep | bubbles | ballance | healthbar. Remove if it would feel forced.
+cta_app: healthbar        # optional: bubbles | ballance | healthbar (never ikeep or Chengel). Remove if it would feel forced.
 ---
 
 ## Why this topic
@@ -31,10 +31,11 @@ Body text, 700–1200 words in total. First person, plain English, no hype. Ever
 
 ## LinkedIn
 
-120–180 words. The first two lines are the hook. End with the link:
+English, short: 60–100 words, in the owner's LinkedIn voice (twin-profile.md 3.4). Hook line with an emoji, at most 2–3 short bullets, one question to the reader, then the link and 3–5 hashtags:
 https://blog.bahadirsonmez.com/posts/<slug>/?utm_source=linkedin&utm_medium=social&utm_campaign=<slug>
+#iOSDevelopment #SwiftUI #BuildInPublic #IndieDev #AI
 
 ## X
 
-One post under 280 characters including the link:
+Türkçe, link dahil 280 karakteri geçmeyen tek gönderi; 1–2 emoji, 1–2 hashtag:
 https://blog.bahadirsonmez.com/posts/<slug>/?utm_source=x&utm_medium=social&utm_campaign=<slug>

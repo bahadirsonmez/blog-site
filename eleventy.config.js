@@ -3,6 +3,8 @@ import rss from "@11ty/eleventy-plugin-rss";
 
 const isPublishedPost = (p) =>
   p.data.status === "ready" && /[\\/]posts[\\/][^\\/]+\.md$/.test(p.inputPath);
+// Short daily explainers ("how it works") live in their own list so they do not bury the essays.
+const isExplainer = (p) => (p.data.tags ?? []).includes("how-it-works");
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -29,6 +31,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("isoDate", (d) => d.toISOString().slice(0, 10));
   eleventyConfig.addCollection("posts", (api) =>
     api.getAll().filter(isPublishedPost).sort((a, b) => b.date - a.date),
+  );
+  eleventyConfig.addCollection("essays", (api) =>
+    api.getAll().filter(isPublishedPost).filter((p) => !isExplainer(p)).sort((a, b) => b.date - a.date),
+  );
+  eleventyConfig.addCollection("explainers", (api) =>
+    api.getAll().filter(isPublishedPost).filter(isExplainer).sort((a, b) => b.date - a.date),
   );
   eleventyConfig.addCollection("tagList", (api) =>
     [...new Set(api.getAll().filter(isPublishedPost).flatMap((p) => p.data.tags ?? []))].sort(),

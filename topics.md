@@ -1,6 +1,6 @@
 # Topic log
 
-One row per routine run that drafts or skips. Weeks start on Monday. The weekly cap is 2 drafts.
+One row per routine run that drafts or skips. Weeks start on Monday. The routine runs daily and pauses while 2 drafts are waiting for review.
 
 | Week (Mon date) | Draft date | Slug | Trigger (news/backlog) | Status (drafted/published/skipped) |
 |---|---|---|---|---|
@@ -13,3 +13,4 @@ One row per routine run that drafts or skips. Weeks start on Monday. The weekly 
 | 2026-10-12 | 2026-10-17 | iphone-widgets-on-apple-homeview | news | published |
 | 2026-10-12 | 2026-10-18 | app-review-guidelines-october-update | news | published |
 | 2026-10-12 | 2026-10-19 | xcode-27-1-rebuild-checklist | news | published |
+| 2026-10-19 | - | - | waiting | skipped |

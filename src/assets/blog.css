@@ -8,6 +8,10 @@
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--cream);color:var(--slate);font:400 1rem/1.6 var(--sans)}
 img,svg{max-width:100%;height:auto}
+.diagram{margin:1.75rem 0;padding:1rem;background:var(--white);border-radius:.75rem;border:1px solid rgba(22,5,114,.12)}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram figcaption{margin-top:.5rem;font-size:.9rem;color:#555}
+.series-link{margin:0 0 1.5rem;font-size:.95rem;color:#555}
 a{color:var(--cobalt);text-underline-offset:.18em}
 a:hover{color:var(--indigo)}
 .skip-link{position:absolute;left:-999px}
