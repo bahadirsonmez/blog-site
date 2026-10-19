@@ -11,3 +11,5 @@ One row per routine run that drafts or skips. Weeks start on Monday. The weekly 
 | 2026-10-12 | 2026-10-15 | observable-vs-observableobject | backlog | drafted |
 | 2026-10-12 | 2026-10-16 | multiseat-subscriptions | news | published |
 | 2026-10-12 | 2026-10-17 | iphone-widgets-on-apple-homeview | news | published |
+| 2026-10-12 | 2026-10-18 | app-review-guidelines-october-update | news | published |
+| 2026-10-12 | 2026-10-19 | xcode-27-1-rebuild-checklist | news | published |

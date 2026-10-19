@@ -4,8 +4,8 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 
 - [x] How DNS turns a name into an address
 - [x] What happens when you type a URL and press Enter
-- [ ] How HTTPS keeps a connection private (the TLS handshake, simplified)
-- [ ] How a hash table finds things fast
+- [x] How HTTPS keeps a connection private (the TLS handshake, simplified)
+- [x] How a hash table finds things fast
 - [ ] How Git stores your commits
 - [ ] How a CPU runs one instruction (fetch, decode, execute)
 - [ ] How RAM and disk differ
@@ -49,3 +49,5 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 |---|---|---|
 | 2026-10-15 | how-dns-works | published |
 | 2026-10-17 | how-a-url-becomes-a-page | published |
+| 2026-10-19 | how-https-stays-private | published |
+| 2026-10-19 | how-hash-tables-find-things-fast | published |
