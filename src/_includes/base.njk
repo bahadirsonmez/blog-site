@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+  {%- set ogImageUrl = site.url + (ogImage or "/assets/social-preview-2026-10.png") %}
+  {%- set ogAlt = ogImageAlt if ogImage else "Bahadır Sönmez — Blog: iOS software engineer, notes on Apple development, the Apple ecosystem and AI" %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#160572">
@@ -13,16 +15,16 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:site_name" content="{{ site.blogName }}">
   <meta property="og:locale" content="en_US">
-  <meta property="og:image" content="{{ site.url }}/assets/social-preview-2026-10.png">
+  <meta property="og:image" content="{{ ogImageUrl }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Bahadır Sönmez — Blog: iOS software engineer, notes on Apple development, the Apple ecosystem and AI">
+  <meta property="og:image:alt" content="{{ ogAlt }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ title or site.blogName }}">
   <meta name="twitter:description" content="{{ summary or description or site.description }}">
-  <meta name="twitter:image" content="{{ site.url }}/assets/social-preview-2026-10.png">
-  <meta name="twitter:image:alt" content="Bahadır Sönmez — Blog: iOS software engineer, notes on Apple development, the Apple ecosystem and AI">
+  <meta name="twitter:image" content="{{ ogImageUrl }}">
+  <meta name="twitter:image:alt" content="{{ ogAlt }}">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/rss+xml" title="{{ site.blogName }}" href="/feed.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">

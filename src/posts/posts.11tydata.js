@@ -16,6 +16,9 @@ export default {
     slug: slugOf,
     permalink: (d) => (d.status === "ready" ? `/posts/${slugOf(d)}/` : false),
     ogType: () => "article",
+    // Per-post social card rendered by src/og.11ty.js.
+    ogImage: (d) => (d.status === "ready" ? `/posts/${slugOf(d)}/og.png` : undefined),
+    ogImageAlt: (d) => `${d.title} · ${d.site.name}, Blog`,
     summary: (d) => d.description || summarize(d.page.rawInput),
     jsonLd: (d) => ({
       "@context": "https://schema.org",
