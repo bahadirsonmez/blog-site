@@ -26,6 +26,7 @@
   <meta name="twitter:image" content="{{ ogImageUrl }}">
   <meta name="twitter:image:alt" content="{{ ogAlt }}">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="alternate" type="application/rss+xml" title="{{ site.blogName }}" href="/feed.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,6 +50,7 @@
   </main>
   <footer class="site-footer">
     <p>© Bahadır Sönmez · <a href="{{ site.mainUrl }}/">bahadirsonmez.com</a></p>
+    <p class="more-apps">Apps by Bahadır: {% for key, app in apps %}<a href="{{ app.url }}">{{ app.name }}{% if app.comingSoon %} (coming soon){% endif %}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
     <p><a href="{{ site.linkedin }}">LinkedIn</a> · <a href="{{ site.github }}">GitHub</a> · <a href="/feed.xml">RSS</a></p>
   </footer>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.beaconToken }}"}'></script><!-- End Cloudflare Web Analytics -->

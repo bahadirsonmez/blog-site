@@ -40,6 +40,23 @@ test("header links to main site apps", async () => {
   assert.ok(html.includes('href="https://bahadirsonmez.com/"'));
 });
 
+test("footer lists every app site, Chengel as coming soon", async () => {
+  const html = await homeHtml();
+  const footer = html.slice(html.indexOf('<footer class="site-footer">'));
+  const order = ["chengel", "ikeep", "bubbles", "ballance", "healthbar"]
+    .map((app) => footer.indexOf(`href="https://${app}.bahadirsonmez.com/"`));
+  assert.ok(order.every((i) => i > 0), "each app site is linked from the footer");
+  assert.deepEqual([...order].sort((a, b) => a - b), order, "same order as the main site");
+  assert.ok(footer.includes("Chengel (coming soon)"));
+  assert.ok(!footer.includes("apps.apple.com"), "no App Store links in the footer");
+});
+
+test("has an apple-touch-icon", async () => {
+  const s = await buildSite();
+  assert.ok(s.read("index.html").includes('<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">'));
+  assert.ok(s.exists("assets/apple-touch-icon.png"));
+});
+
 test("loads Fraunces and Inter", async () => {
   const html = await homeHtml();
   assert.ok(html.includes("fonts.googleapis.com/css2?family=Fraunces"));

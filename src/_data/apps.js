@@ -1,4 +1,10 @@
 export default {
+  chengel: {
+    name: "Chengel",
+    url: "https://chengel.bahadirsonmez.com/",
+    blurb: "A Swedish-style crossword for language learners: the clue comes in your language, the answer in the one you’re learning. English, Turkish, German and Spanish, from A1 to C1, on iPhone and iPad.",
+    comingSoon: true,
+  },
   ikeep: {
     name: "iKeep",
     url: "https://ikeep.bahadirsonmez.com/",
