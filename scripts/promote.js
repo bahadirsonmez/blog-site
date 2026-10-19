@@ -2,6 +2,7 @@ import matter from "gray-matter";
 import { existsSync, mkdirSync, readdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { findVisuals } from "./visuals.js";
 
 const WHY_END = "<!-- end why -->";
 const STRIPPED = new Set(["Why this topic", "LinkedIn", "X"]);
@@ -34,7 +35,8 @@ export function promote(draftPath, { srcPostsDir = "src/posts", archiveDir = "dr
     throw new Error(`Unresolved [BAHADIR: ...] markers at line ${markerLines.join(", ")}`);
   }
 
-  const parsed = matter(original);
+  // Options disable gray-matter's cache: a cached copy lacks `.matter` (non-enumerable), which broke a second promote of identical text.
+  const parsed = matter(original, {});
   if (parsed.data.status !== "draft") {
     throw new Error(`Expected status: draft, found status: ${parsed.data.status}`);
   }
@@ -77,6 +79,19 @@ export function promote(draftPath, { srcPostsDir = "src/posts", archiveDir = "dr
     .join("\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
+  // Owner's rule (2026-10-19): no post goes out without a topic visual in the post body.
+  const { visuals, problems } = findVisuals(body);
+  if (problems.length) throw new Error(`Fix the post's visuals: ${problems.join("; ")}`);
+  if (!visuals.length) {
+    throw new Error(
+      "No topic visual: add at least one <figure> with an inline SVG diagram (with <title>) or an image with alt text to the post body",
+    );
+  }
+  const assetsRoot = path.dirname(srcPostsDir);
+  const missing = visuals.filter((v) => v.kind === "img" && v.src.startsWith("/assets/") && !existsSync(path.join(assetsRoot, v.src)));
+  if (missing.length) {
+    throw new Error(`Image file not found: ${missing.map((v) => path.join(assetsRoot, v.src)).join(", ")}`);
+  }
   const rawFrontmatter = parsed.matter.replace(/^status:\s*["']?draft["']?\s*(#.*)?$/m, "status: ready").trim();
   if (matter(`---\n${rawFrontmatter}\n---\n`).data.status !== "ready") {
     throw new Error("Could not rewrite the status line to `status: ready`; fix the frontmatter and retry");

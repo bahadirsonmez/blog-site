@@ -46,10 +46,20 @@ Search the web (WebSearch) for the last few days of Apple developer news and AI 
   `https://blog.bahadirsonmez.com/posts/<slug>/?utm_source=x&utm_medium=social&utm_campaign=<slug>`. One idea that makes people curious, not "I wrote a post about X". Keep technical terms in English. At most 1–2 emoji and 1–2 hashtags. For broad topics add an optional 3–4 post Turkish thread after the single post.
 - **Tags:** lowercase kebab-case; usually one of `apple-dev`, `apple-ecosystem`, `ai`.
 
+### 4.1 The visual (required)
+
+The owner's rule (2026-10-19): every post carries at least one topic visual. A text-only draft is not published: `scripts/promote.js` refuses it and `npm test` fails while it waits in `drafts/`.
+
+- **What:** your own diagram of the news, drawn as inline SVG inside `<figure class="diagram">` with a one-line `<figcaption>`, placed after the section that explains the change. Pick the shape the story has: what changed (before → change → what to check), a timeline of the dates, a before/after of a rule or setting, or the decision a developer has to make. Every label is a fact from `## Sources` (dates, version numbers, rule numbers); never invent numbers.
+- **No downloaded images:** do not use screenshots, press images, logos or photos from the web (copyright). The owner may add his own screenshot later in the publish job; that is optional and never replaces the diagram.
+- **Rules:** the same as `ROUTINE-HOW-IT-WORKS.md` section 5: `viewBox="0 0 640 H"` (H 160–340), `width="640"`, `role="img"`, `aria-labelledby` pointing at a `<title>` and a `<desc>`, at most 6 boxes, labels at most 22 characters at font-size 15, site palette only, `<marker>` arrowheads with ids unique to this post, no scripts, no external fonts or images, no `style` blocks, no blank lines inside the `<figure>`. Start from the example in `drafts/TEMPLATE.md`.
+- **Check it:** extract the SVG to a scratch file in the session scratchpad, run `xmllint --noout <file>.svg`, render it with `qlmanage -t -s 900 -o <scratch-dir> <file>.svg` and open the PNG with the Read tool: no text overlapping or running out of its box, arrows touching their boxes, nothing cut off. Fix and re-render until it is clean. If it is still broken after three tries, do not write the draft: append a `skipped` row (trigger `svg`) and stop.
+- Diagram text does not count toward the 700–1200 words.
+
 ## 5. Check and log
 
-1. Check the draft: no leftover template text, word count within range, every link opens a real page, tags and date present, the `<!-- end why -->` line exists.
-2. Run `npm test` (drafts live outside `src/`, so it must stay green).
+1. Check the draft: no leftover template text, word count within range, every link opens a real page, tags and date present, the `<!-- end why -->` line exists, at least one topic visual (section 4.1) is in the post body and rendered cleanly.
+2. Run `npm test` (drafts live outside `src/`, so it must stay green; `test/visuals.test.js` fails on a waiting draft without a visual).
 3. Append a row to `topics.md`: `| <week start> | <draft date> | <slug> | news | drafted |`. Skips get a row too (slug `-`).
 4. Final message to the owner, in Turkish, 3–5 lines: topic, why now, file path, what the `[BAHADIR: ...]` markers ask, and that running the "Blog yayınla" job publishes it once he accepts. For a skip: one line with the reason.
 

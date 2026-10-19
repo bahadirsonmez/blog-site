@@ -19,6 +19,38 @@ Apple's own change list is short. The items that matter for most developers:
 
 In the companion post Apple also says it blocked over 150K apps with safety issues and terminated over 193K developer accounts for fraud and abuse last year. That is the context: the update is aimed at coordinated fraud, not at you. The wording still binds everyone.
 
+<figure class="diagram">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 272" width="640" height="272" role="img" aria-labelledby="t-arg d-arg" font-family="Inter, system-ui, sans-serif" font-size="15">
+<title id="t-arg">Three changed guidelines and what to check for each</title>
+<desc id="d-arg">Three rows. Guideline 2.5.19 on hidden features leads to listing flag-gated features in Notes for Review. Guideline 2.3.14 on creative assets leads to no prices or discounts and all-ages content. Guideline 1.2 on AI content creation apps leads to a filter, reporting, blocking and contact information.</desc>
+<defs><marker id="arg-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2544a0"/></marker></defs>
+<text x="140" y="28" text-anchor="middle" fill="#2c2c2c" font-size="13">Changed guideline</text>
+<text x="500" y="28" text-anchor="middle" fill="#2c2c2c" font-size="13">Check before you submit</text>
+<rect x="20" y="44" width="240" height="60" rx="10" fill="#160572"/>
+<text x="140" y="69" text-anchor="middle" fill="#ffffff" font-weight="600">2.5.19</text>
+<text x="140" y="91" text-anchor="middle" fill="#ffffff" font-size="13">hidden or dormant features</text>
+<rect x="380" y="44" width="240" height="60" rx="10" fill="#f2ebe6" stroke="#160572" stroke-width="2"/>
+<text x="500" y="69" text-anchor="middle" fill="#160572" font-weight="600">List flagged features</text>
+<text x="500" y="91" text-anchor="middle" fill="#2c2c2c" font-size="13">in Notes for Review</text>
+<line x1="262" y1="74" x2="378" y2="74" stroke="#2544a0" stroke-width="2" marker-end="url(#arg-a)"/>
+<rect x="20" y="120" width="240" height="60" rx="10" fill="#160572"/>
+<text x="140" y="145" text-anchor="middle" fill="#ffffff" font-weight="600">2.3.14</text>
+<text x="140" y="167" text-anchor="middle" fill="#ffffff" font-size="13">creative assets</text>
+<rect x="380" y="120" width="240" height="60" rx="10" fill="#f2ebe6" stroke="#160572" stroke-width="2"/>
+<text x="500" y="145" text-anchor="middle" fill="#160572" font-weight="600">No prices or discounts</text>
+<text x="500" y="167" text-anchor="middle" fill="#2c2c2c" font-size="13">all-ages content</text>
+<line x1="262" y1="150" x2="378" y2="150" stroke="#2544a0" stroke-width="2" marker-end="url(#arg-a)"/>
+<rect x="20" y="196" width="240" height="60" rx="10" fill="#160572"/>
+<text x="140" y="221" text-anchor="middle" fill="#ffffff" font-weight="600">1.2</text>
+<text x="140" y="243" text-anchor="middle" fill="#ffffff" font-size="13">AI content creation apps</text>
+<rect x="380" y="196" width="240" height="60" rx="10" fill="#f2ebe6" stroke="#160572" stroke-width="2"/>
+<text x="500" y="221" text-anchor="middle" fill="#160572" font-weight="600">Filter, report, block</text>
+<text x="500" y="243" text-anchor="middle" fill="#2c2c2c" font-size="13">plus published contact info</text>
+<line x1="262" y1="226" x2="378" y2="226" stroke="#2544a0" stroke-width="2" marker-end="url(#arg-a)"/>
+</svg>
+<figcaption>Each changed guideline on the left, the check it adds to your next submission on the right.</figcaption>
+</figure>
+
 ## 2.5.19: dormant features and your feature flags
 
 The new text reads: "Don't include any hidden, dormant, or undocumented features in your app; your app's functionality should be clear to end users and App Review." Hiding undocumented features in the binary, for example through code obfuscation, is grounds for removal and account termination.

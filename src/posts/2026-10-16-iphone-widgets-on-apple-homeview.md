@@ -23,6 +23,29 @@ There is no HomeView SDK. What developers get is spread across three places:
 
 The HIG describes two places a widget can live on HomeView.
 
+<figure class="diagram">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 264" width="640" height="264" role="img" aria-labelledby="t-hv d-hv" font-family="Inter, system-ui, sans-serif" font-size="15">
+<title id="t-hv">Where a small iPhone widget can appear on Apple HomeView</title>
+<desc id="d-hv">A small widget from a connected iPhone can go to two places. The Home Screen is personal, one per enrolled member. The Modular face is shared by the household, holds up to four widgets, and shows them scaled up with the background removed.</desc>
+<defs><marker id="hv-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2544a0"/></marker></defs>
+<rect x="20" y="100" width="190" height="64" rx="10" fill="#160572"/>
+<text x="115" y="128" text-anchor="middle" fill="#ffffff" font-weight="600">Small widget</text>
+<text x="115" y="150" text-anchor="middle" fill="#ffffff" font-size="13">from a connected iPhone</text>
+<rect x="380" y="24" width="240" height="72" rx="10" fill="#f2ebe6" stroke="#160572" stroke-width="2"/>
+<text x="500" y="52" text-anchor="middle" fill="#160572" font-weight="600">Home Screen</text>
+<text x="500" y="76" text-anchor="middle" fill="#2c2c2c" font-size="13">personal, one per member</text>
+<rect x="380" y="148" width="240" height="92" rx="10" fill="#f2ebe6" stroke="#160572" stroke-width="2"/>
+<text x="500" y="176" text-anchor="middle" fill="#160572" font-weight="600">Modular face</text>
+<text x="500" y="200" text-anchor="middle" fill="#2c2c2c" font-size="13">shared, up to 4 widgets</text>
+<text x="500" y="222" text-anchor="middle" fill="#2c2c2c" font-size="13">background removed</text>
+<path d="M212 118L378 62" fill="none" stroke="#2544a0" stroke-width="2" marker-end="url(#hv-a)"/>
+<path d="M212 146L378 192" fill="none" stroke="#2544a0" stroke-width="2" marker-end="url(#hv-a)"/>
+<text x="268" y="68" text-anchor="middle" fill="#2c2c2c" font-size="13">personal screen</text>
+<text x="272" y="204" text-anchor="middle" fill="#2c2c2c" font-size="13">household screen</text>
+</svg>
+<figcaption>Both places use the small widget family; only the Modular face is shared by the household.</figcaption>
+</figure>
+
 **The Home Screen** is personal. Each enrolled household member has their own, with HomeView's built-in widgets plus widgets they pick from their own connected iPhone or iPad.
 
 **The Modular face** is shared. There is one per household and it holds up to four widgets, which can come from different people's iPhones. Apple's own example: if someone puts a Calendar widget there, "that person's calendar appears there for everyone."

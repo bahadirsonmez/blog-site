@@ -16,6 +16,33 @@ The one real difference is the SDK list. Xcode 27 had the iOS 27 SDK; Xcode 27.1
 
 So the question is not "what new API do I get". It is "what changes because I compiled against 27.1".
 
+<figure class="diagram">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 272" width="640" height="272" role="img" aria-labelledby="t-x271 d-x271" font-family="Inter, system-ui, sans-serif" font-size="15">
+<title id="t-x271">What rebuilding with the iOS 27.1 SDK changes</title>
+<desc id="d-x271">Building with Xcode 27.1 against the iOS 27.1 SDK leads to three changes: on iPhone Duo, toolbars and tab bars become vertical; Mac Catalyst builds that use 27.1-only APIs need an if-targetEnvironment guard; and most app extensions cannot run in the iPhone Duo simulator.</desc>
+<defs><marker id="x271-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2544a0"/></marker></defs>
+<rect x="20" y="104" width="190" height="64" rx="10" fill="#160572"/>
+<text x="115" y="132" text-anchor="middle" fill="#ffffff" font-weight="600">iOS 27.1 SDK</text>
+<text x="115" y="154" text-anchor="middle" fill="#ffffff" font-size="13">built with Xcode 27.1</text>
+<rect x="370" y="24" width="250" height="60" rx="10" fill="#f2ebe6" stroke="#160572" stroke-width="2"/>
+<text x="495" y="49" text-anchor="middle" fill="#160572" font-weight="600">iPhone Duo layout</text>
+<text x="495" y="71" text-anchor="middle" fill="#2c2c2c" font-size="13">tab bars and toolbars go vertical</text>
+<rect x="370" y="106" width="250" height="60" rx="10" fill="#f2ebe6" stroke="#160572" stroke-width="2"/>
+<text x="495" y="131" text-anchor="middle" fill="#160572" font-weight="600">Mac Catalyst build</text>
+<text x="495" y="153" text-anchor="middle" fill="#2c2c2c" font-size="13">27.1-only APIs need an #if guard</text>
+<rect x="370" y="188" width="250" height="60" rx="10" fill="#f2ebe6" stroke="#160572" stroke-width="2"/>
+<text x="495" y="213" text-anchor="middle" fill="#160572" font-weight="600">Duo simulator</text>
+<text x="495" y="235" text-anchor="middle" fill="#2c2c2c" font-size="13">most extensions cannot run</text>
+<path d="M212 122L368 56" fill="none" stroke="#2544a0" stroke-width="2" marker-end="url(#x271-a)"/>
+<line x1="212" y1="136" x2="368" y2="136" stroke="#2544a0" stroke-width="2" marker-end="url(#x271-a)"/>
+<path d="M212 150L368 216" fill="none" stroke="#2544a0" stroke-width="2" marker-end="url(#x271-a)"/>
+<text x="286" y="80" text-anchor="middle" fill="#2c2c2c" font-size="13">1</text>
+<text x="290" y="128" text-anchor="middle" fill="#2c2c2c" font-size="13">2</text>
+<text x="286" y="200" text-anchor="middle" fill="#2c2c2c" font-size="13">3</text>
+</svg>
+<figcaption>Same toolchain, new SDK: the three changes, numbered as in the sections below.</figcaption>
+</figure>
+
 ## Change 1: your layout on iPhone Duo
 
 Apple's Prepare page is explicit about the SDK tiers. Built with the iOS 27 SDK, your app resizes to fill most of the inner display but still avoids the status bar on the right edge. Built with the iOS 27.1 SDK or later, the app is treated as optimized: it extends to the full display, and toolbars and tab bars appear vertically below the status bar.

@@ -33,7 +33,7 @@ The series: very short posts (150–300 words) that explain one simple computer-
 
 ## 5. The diagram
 
-Exactly one inline SVG inside `<figure class="diagram">` (a second only if the idea truly needs it), followed by a one-line `<figcaption>`. Follow the example in the template:
+Exactly one inline SVG inside `<figure class="diagram">` (a second only if the idea truly needs it), followed by a one-line `<figcaption>`. The diagram is required (owner's rule 2026-10-19: no post without a topic visual): `scripts/promote.js` refuses a draft without one and `npm test` fails while it waits in `drafts/`. Draw it yourself; never use downloaded images. If it is still broken after three tries, do not write the draft: append a `skipped` row (reason `svg`) and stop. Follow the example in the template:
 
 - `viewBox="0 0 640 H"` (H between 160 and 340), `width="640"`, `role="img"`, `aria-labelledby` pointing at a `<title>` and a `<desc>` that describe the diagram in words.
 - At most 6 boxes. Box labels at most 22 characters, at font-size 15 (roughly 8.5 px per character, so a 150 px box fits about 15 characters; widen the box or shorten the label).
@@ -44,7 +44,7 @@ Exactly one inline SVG inside `<figure class="diagram">` (a second only if the i
 ## 6. Check and log
 
 1. Check the draft: no template text left, 150–300 words, tags and date present, `<!-- end why -->` present, every source link opens a real page, the SVG is well-formed and rendered cleanly.
-2. Run `npm test` (it must stay green).
+2. Run `npm test` (it must stay green; `test/visuals.test.js` fails on a waiting draft without a visual).
 3. Append a row to the log in `topics-how-it-works.md`: `| <draft date> | <slug> | drafted |`. Skips get a row too (slug `-`).
 4. Final message to the owner, in Turkish, 2–3 lines: the topic, the file path, and that he can publish it with the "Blog: taslağı yayınla" job.
 
