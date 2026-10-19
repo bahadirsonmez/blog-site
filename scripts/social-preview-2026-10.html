@@ -1,0 +1,46 @@
+<!doctype html>
+<!--
+  Source of src/assets/social-preview-2026-10.png (blog variant of bahadirsonmez.com/assets/social-preview-2026-10.html) (1200x630, og:image / twitter:image).
+  Mirrors the bahadirsonmez.com hero: indigo field, cobalt and plum circles, yellow eyebrow,
+  white Fraunces headline with the teal line. Re-render with a headless Chromium screenshot
+  at a 1200x630 viewport after document.fonts.ready.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200,height=630">
+<meta name="robots" content="noindex">
+<title>Social preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..800,100,0;1,9..144,400..800,100,0&family=Inter:wght@400;600;700&display=block">
+<style>
+  :root{--indigo:#160572;--white:#fff;--cobalt:#2544a0;--plum:#4b0f4d;--teal:#24e3dc;--crimson:#ea0706;--highlight:#ff0;
+    --serif:"Fraunces",Georgia,serif;--sans:"Inter",-apple-system,"Segoe UI",sans-serif}
+  *{box-sizing:border-box}
+  html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+  body{position:relative;background:var(--indigo);color:var(--white);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .c1,.c2{position:absolute;border-radius:50%}
+  .c1{width:380px;height:380px;background:var(--cobalt);left:-90px;bottom:-130px}
+  .c2{width:240px;height:240px;background:var(--plum);right:70px;top:-60px}
+  .wordmark{position:absolute;left:56px;top:44px;font-family:var(--serif);font-style:italic;font-weight:600;font-size:34px;line-height:.9;letter-spacing:-.04em;font-variation-settings:"SOFT" 100,"WONK" 0}
+  .wordmark span{display:block;margin-left:1.1em}
+  .copy{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 80px}
+  .eyebrow{display:inline-block;margin:0 0 30px;background:var(--highlight);color:#000;padding:7px 14px;font-size:18px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--crimson);margin-right:12px;vertical-align:2px}
+  h1{margin:0;font-family:var(--serif);font-weight:700;font-variation-settings:"SOFT" 100,"WONK" 0;font-size:86px;line-height:1;letter-spacing:-.05em;white-space:nowrap}
+  h1 em{display:block;font-style:normal;color:var(--teal)}
+  .sub{margin:28px 0 0;font-family:var(--serif);font-size:27px;letter-spacing:-.018em;color:rgba(255,255,255,.88)}
+  .url{position:absolute;right:56px;bottom:44px;font-size:20px;font-weight:600;letter-spacing:.02em;color:rgba(255,255,255,.9)}
+</style>
+</head>
+<body>
+  <div class="c1"></div><div class="c2"></div>
+  <div class="wordmark">Bahadır<span>Sönmez</span></div>
+  <div class="copy">
+    <p class="eyebrow"><span class="dot"></span>Blog · Bahadır Sönmez</p>
+    <h1>iOS Software Engineer<em>Eight years. Millions of users.</em></h1>
+    <p class="sub">Notes on Apple development, the Apple ecosystem and AI.</p>
+  </div>
+  <div class="url">blog.bahadirsonmez.com</div>
+</body>
+</html>

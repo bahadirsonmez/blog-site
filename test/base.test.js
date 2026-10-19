@@ -15,7 +15,17 @@ test("has lang en, canonical, og and twitter tags", async () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/blog\.bahadirsonmez\.com\/">/);
   assert.match(html, /property="og:site_name"/);
   assert.match(html, /name="twitter:card" content="summary_large_image"/);
-  assert.match(html, /property="og:image" content="https:\/\/blog\.bahadirsonmez\.com\/assets\/social-preview\.png"/);
+  assert.match(html, /property="og:image" content="https:\/\/blog\.bahadirsonmez\.com\/assets\/social-preview-2026-10\.png"/);
+  assert.match(html, /name="twitter:image" content="https:\/\/blog\.bahadirsonmez\.com\/assets\/social-preview-2026-10\.png"/);
+  assert.match(html, /property="og:image:width" content="1200"/);
+  assert.match(html, /property="og:image:height" content="630"/);
+  assert.match(html, /property="og:image:alt" content="[^"]+"/);
+  assert.ok(!html.includes("/assets/social-preview.png"), "no tag points at the old preview image");
+});
+
+test("social preview image is published", async () => {
+  const s = await buildSite();
+  assert.ok(s.exists("assets/social-preview-2026-10.png"));
 });
 
 test("includes Cloudflare beacon token", async () => {
