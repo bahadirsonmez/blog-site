@@ -6,7 +6,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] What happens when you type a URL and press Enter
 - [x] How HTTPS keeps a connection private (the TLS handshake, simplified)
 - [x] How a hash table finds things fast
-- [ ] How Git stores your commits
+- [x] How Git stores your commits
 - [ ] How a CPU runs one instruction (fetch, decode, execute)
 - [ ] How RAM and disk differ
 - [ ] How an SSD stores data
@@ -51,3 +51,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-10-17 | how-a-url-becomes-a-page | published |
 | 2026-10-17 | how-https-stays-private | published |
 | 2026-10-18 | how-hash-tables-find-things-fast | published |
+| 2026-10-20 | how-git-stores-commits | published |
