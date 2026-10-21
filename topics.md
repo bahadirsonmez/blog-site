@@ -15,3 +15,4 @@ One row per routine run that drafts or skips. Weeks start on Monday. The routine
 | 2026-10-12 | 2026-10-19 | xcode-27-1-rebuild-checklist | news | published |
 | 2026-10-19 | - | - | waiting | skipped |
 | 2026-10-19 | 2026-10-20 | eu-att-prompt-ios-27-2 | news | published |
+| 2026-10-19 | 2026-10-21 | xcode-27-2-json-project-format | news | published |
