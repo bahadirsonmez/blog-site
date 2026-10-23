@@ -16,3 +16,5 @@ One row per routine run that drafts or skips. Weeks start on Monday. The routine
 | 2026-10-19 | - | - | waiting | skipped |
 | 2026-10-19 | 2026-10-20 | eu-att-prompt-ios-27-2 | news | published |
 | 2026-10-19 | 2026-10-21 | xcode-27-2-json-project-format | news | published |
+| 2026-10-19 | - | - | no-news | skipped |
+| 2026-10-19 | 2026-10-23 | agent-skills-foundation | news | published |
