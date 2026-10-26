@@ -10,7 +10,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [ ] How a CPU runs one instruction (fetch, decode, execute)
 - [ ] How RAM and disk differ
 - [ ] How an SSD stores data
-- [ ] How a cache makes things faster
+- [x] How a cache makes things faster
 - [x] How TCP makes sure data arrives
 - [x] How a packet finds its way across the internet
 - [ ] How passwords are stored (hashing and salt)
@@ -54,3 +54,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-10-20 | how-git-stores-commits | published |
 | 2026-10-21 | how-tcp-makes-sure-data-arrives | published |
 | 2026-10-22 | how-a-packet-finds-its-way | published |
+| 2026-10-26 | how-a-cache-makes-things-faster | published |
