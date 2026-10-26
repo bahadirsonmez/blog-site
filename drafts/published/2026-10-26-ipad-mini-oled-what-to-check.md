@@ -91,12 +91,16 @@ Everything below is my reading of the situation, not something Apple has said.
 
 ## LinkedIn
 
-📱 The new iPad mini has an 8.5-inch OLED screen, and Apple has not published its size in points yet.
+📱 The iPad mini gets its first OLED screen, two years after the A17 Pro model.
 
-The spec sheet gives pixels, but a few things for #iOSDevelopment are still open:
-- safe area and refresh rate are not published
-- no new device in the Xcode 27.2 RC notes
-- My take, not fact: measure on a device before changing layouts, and keep #iPadOS screens flexible 🧩
+✅ What looks good
+- brighter, higher-contrast display in a thinner body
+- A20 Pro chip, with big gains on paper (Apple's own tests)
 
-Details and a diagram on the blog:
+❓ Still unclear for #iOSDevelopment
+- point size and safe area for #iPadOS layouts are not published
+- refresh rate is not stated; MacRumors reads it as 60 Hz
+- price is up from $599 to $699 (MacRumors)
+
+More details:
 https://blog.bahadirsonmez.com/posts/ipad-mini-oled-what-to-check/?utm_source=linkedin&utm_medium=social&utm_campaign=ipad-mini-oled-what-to-check
