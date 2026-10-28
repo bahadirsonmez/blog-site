@@ -21,3 +21,4 @@ One row per routine run that drafts or skips. Weeks start on Monday. The routine
 | 2026-10-19 | 2026-10-26 | safari-27-1-foldable-web-apis | news | published |
 | 2026-10-26 | 2026-10-26 | ipad-mini-oled-what-to-check | news | published |
 | 2026-10-26 | 2026-10-27 | gpt-6-1-terra | news | published |
+| 2026-10-26 | 2026-10-28 | copilot-assisted-permissions | news | published |
