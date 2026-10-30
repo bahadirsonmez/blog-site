@@ -55,3 +55,8 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-10-21 | how-tcp-makes-sure-data-arrives | published |
 | 2026-10-22 | how-a-packet-finds-its-way | published |
 | 2026-10-26 | how-a-cache-makes-things-faster | published |
+| 2026-10-30 | how-passwords-are-stored | published |
+| 2026-10-30 | how-a-cpu-runs-an-instruction | published |
+| 2026-10-30 | how-ram-and-disk-differ | published |
+| 2026-10-30 | how-an-ssd-stores-data | published |
+| 2026-10-30 | how-public-key-encryption-works | published |
