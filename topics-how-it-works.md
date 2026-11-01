@@ -16,7 +16,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [ ] How passwords are stored (hashing and salt)
 - [ ] How public-key encryption works
 - [ ] How a JWT works
-- [ ] How "Sign in with ..." works (OAuth, simplified)
+- [x] How "Sign in with ..." works (OAuth, simplified)
 - [ ] How a database index works
 - [ ] What a REST request and response look like
 - [ ] How WebSockets differ from polling
@@ -60,3 +60,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-10-30 | how-ram-and-disk-differ | published |
 | 2026-10-30 | how-an-ssd-stores-data | published |
 | 2026-10-30 | how-public-key-encryption-works | published |
+| 2026-11-01 | how-sign-in-with-works | published |
