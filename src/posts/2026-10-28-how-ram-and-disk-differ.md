@@ -1,7 +1,7 @@
 ---
 title: "How RAM and disk differ"
 description: "RAM is temporary working space and disk keeps files. A page cache in RAM sits between them, which is why a second read of a file skips the slow disk."
-date: 2026-10-30
+date: 2026-10-28
 tags: [how-it-works, hardware]
 status: ready
 ---

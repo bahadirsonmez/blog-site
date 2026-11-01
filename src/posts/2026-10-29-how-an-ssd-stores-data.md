@@ -1,7 +1,7 @@
 ---
 title: "How an SSD stores data"
 description: "Flash memory cannot overwrite data in place, so an SSD's controller erases whole blocks, spreads the wear and hides it all from the operating system."
-date: 2026-10-30
+date: 2026-10-29
 tags: [how-it-works, hardware]
 status: ready
 ---

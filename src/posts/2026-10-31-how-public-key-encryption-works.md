@@ -1,7 +1,7 @@
 ---
 title: "How public-key encryption works"
 description: "Public-key encryption uses a key pair: anyone can lock a message with the public key, and only the private key unlocks it."
-date: 2026-10-30
+date: 2026-10-31
 tags: [how-it-works, security]
 status: ready
 ---

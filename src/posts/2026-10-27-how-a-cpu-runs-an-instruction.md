@@ -1,7 +1,7 @@
 ---
 title: "How a CPU runs one instruction"
 description: "A CPU gets the instruction its program counter points at, works out what it asks for, does it, and moves on. The loop is simplified, but it is the core idea."
-date: 2026-10-30
+date: 2026-10-27
 tags: [how-it-works, hardware]
 status: ready
 ---
