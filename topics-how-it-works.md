@@ -17,7 +17,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [ ] How public-key encryption works
 - [x] How a JWT works
 - [x] How "Sign in with ..." works (OAuth, simplified)
-- [ ] How a database index works
+- [x] How a database index works
 - [ ] What a REST request and response look like
 - [ ] How WebSockets differ from polling
 - [ ] How a CDN serves files from a server near you
@@ -62,3 +62,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-10-31 | how-public-key-encryption-works | published |
 | 2026-11-01 | how-a-jwt-works | published |
 | 2026-11-01 | how-sign-in-with-works | published |
+| 2026-11-03 | how-a-database-index-works | published |
