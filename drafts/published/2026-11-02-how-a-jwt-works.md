@@ -1,10 +1,16 @@
 ---
 title: "How a JWT works"
 description: "A JWT is a header, a payload and a signature joined by dots. The signature catches changes to the token, but it does not hide what is inside."
-date: 2026-11-01
+date: 2026-11-02
 tags: [how-it-works, security]
-status: ready
+status: draft
 ---
+
+## Why this topic
+
+Question it answers: how does a JSON Web Token work, and what does its signature protect? Claims rest on RFC 7519 (JWT), RFC 7515 (JWS) and RFC 8725 (best practices). Simplification on purpose: only signed tokens (JWS compact form) are described; encrypted tokens (JWE) and nested tokens are left out. The "encoded, not encrypted" point is my inference from the base64url definition, not a sentence in the RFCs, and the post says so.
+
+<!-- end why -->
 
 A JWT (JSON Web Token) is a compact string that carries claims, such as who issued a token and when it expires. The idea to keep: the signature protects the token from changes, but it does not hide what is inside.
 

@@ -60,6 +60,6 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-10-28 | how-ram-and-disk-differ | published |
 | 2026-10-29 | how-an-ssd-stores-data | published |
 | 2026-10-31 | how-public-key-encryption-works | published |
-| 2026-11-01 | how-a-jwt-works | published |
+| 2026-11-02 | how-a-jwt-works | published |
 | 2026-11-01 | how-sign-in-with-works | published |
 | 2026-11-03 | how-a-database-index-works | published |
