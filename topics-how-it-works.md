@@ -7,19 +7,19 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How HTTPS keeps a connection private (the TLS handshake, simplified)
 - [x] How a hash table finds things fast
 - [x] How Git stores your commits
-- [ ] How a CPU runs one instruction (fetch, decode, execute)
-- [ ] How RAM and disk differ
-- [ ] How an SSD stores data
+- [x] How a CPU runs one instruction (fetch, decode, execute)
+- [x] How RAM and disk differ
+- [x] How an SSD stores data
 - [x] How a cache makes things faster
 - [x] How TCP makes sure data arrives
 - [x] How a packet finds its way across the internet
-- [ ] How passwords are stored (hashing and salt)
-- [ ] How public-key encryption works
+- [x] How passwords are stored (hashing and salt)
+- [x] How public-key encryption works
 - [x] How a JWT works
 - [x] How "Sign in with ..." works (OAuth, simplified)
 - [x] How a database index works
-- [ ] What a REST request and response look like
-- [ ] How WebSockets differ from polling
+- [x] What a REST request and response look like
+- [x] How WebSockets differ from polling
 - [ ] How a CDN serves files from a server near you
 - [ ] How a load balancer spreads requests
 - [ ] How ARC frees memory in Swift
@@ -54,12 +54,14 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-10-20 | how-git-stores-commits | published |
 | 2026-10-21 | how-tcp-makes-sure-data-arrives | published |
 | 2026-10-22 | how-a-packet-finds-its-way | published |
-| 2026-10-26 | how-a-cache-makes-things-faster | published |
 | 2026-10-30 | how-passwords-are-stored | published |
 | 2026-10-27 | how-a-cpu-runs-an-instruction | published |
 | 2026-10-28 | how-ram-and-disk-differ | published |
+| 2026-10-26 | how-a-cache-makes-things-faster | published |
 | 2026-10-29 | how-an-ssd-stores-data | published |
 | 2026-10-31 | how-public-key-encryption-works | published |
 | 2026-11-02 | how-a-jwt-works | published |
 | 2026-11-01 | how-sign-in-with-works | published |
 | 2026-11-03 | how-a-database-index-works | published |
+| 2026-11-04 | how-a-rest-request-looks | published |
+| 2026-11-05 | how-websockets-differ-from-polling | drafted |
