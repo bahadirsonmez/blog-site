@@ -64,4 +64,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-01 | how-sign-in-with-works | published |
 | 2026-11-03 | how-a-database-index-works | published |
 | 2026-11-04 | how-a-rest-request-looks | published |
-| 2026-11-05 | how-websockets-differ-from-polling | drafted |
+| 2026-11-05 | how-websockets-differ-from-polling | published |
