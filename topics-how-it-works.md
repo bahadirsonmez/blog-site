@@ -20,7 +20,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How a database index works
 - [x] What a REST request and response look like
 - [x] How WebSockets differ from polling
-- [ ] How a CDN serves files from a server near you
+- [x] How a CDN serves files from a server near you
 - [ ] How a load balancer spreads requests
 - [ ] How ARC frees memory in Swift
 - [ ] How the stack and the heap differ
@@ -65,3 +65,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-03 | how-a-database-index-works | published |
 | 2026-11-04 | how-a-rest-request-looks | published |
 | 2026-11-05 | how-websockets-differ-from-polling | published |
+| 2026-11-06 | how-a-cdn-serves-files | published |
