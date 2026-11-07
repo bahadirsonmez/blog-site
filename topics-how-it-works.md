@@ -21,7 +21,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] What a REST request and response look like
 - [x] How WebSockets differ from polling
 - [x] How a CDN serves files from a server near you
-- [ ] How a load balancer spreads requests
+- [x] How a load balancer spreads requests
 - [ ] How ARC frees memory in Swift
 - [ ] How the stack and the heap differ
 - [ ] How a compiler turns code into machine code
@@ -66,3 +66,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-04 | how-a-rest-request-looks | published |
 | 2026-11-05 | how-websockets-differ-from-polling | published |
 | 2026-11-06 | how-a-cdn-serves-files | published |
+| 2026-11-07 | how-a-load-balancer-spreads-requests | published |
