@@ -23,7 +23,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How a CDN serves files from a server near you
 - [x] How a load balancer spreads requests
 - [x] How ARC frees memory in Swift
-- [ ] How the stack and the heap differ
+- [x] How the stack and the heap differ
 - [ ] How a compiler turns code into machine code
 - [ ] How a process differs from a thread
 - [ ] How a deadlock happens
@@ -68,3 +68,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-06 | how-a-cdn-serves-files | published |
 | 2026-11-07 | how-a-load-balancer-spreads-requests | published |
 | 2026-11-08 | how-arc-frees-memory | published |
+| 2026-11-09 | how-stack-and-heap-differ | published |
