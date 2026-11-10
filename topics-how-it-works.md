@@ -24,7 +24,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How a load balancer spreads requests
 - [x] How ARC frees memory in Swift
 - [x] How the stack and the heap differ
-- [ ] How a compiler turns code into machine code
+- [x] How a compiler turns code into machine code
 - [ ] How a process differs from a thread
 - [ ] How a deadlock happens
 - [ ] How a file system finds your file
@@ -69,3 +69,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-07 | how-a-load-balancer-spreads-requests | published |
 | 2026-11-08 | how-arc-frees-memory | published |
 | 2026-11-09 | how-stack-and-heap-differ | published |
+| 2026-11-10 | how-a-compiler-makes-machine-code | published |
