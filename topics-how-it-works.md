@@ -25,7 +25,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How ARC frees memory in Swift
 - [x] How the stack and the heap differ
 - [x] How a compiler turns code into machine code
-- [ ] How a process differs from a thread
+- [x] How a process differs from a thread
 - [ ] How a deadlock happens
 - [ ] How a file system finds your file
 - [ ] How UTF-8 stores text
@@ -70,3 +70,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-08 | how-arc-frees-memory | published |
 | 2026-11-09 | how-stack-and-heap-differ | published |
 | 2026-11-10 | how-a-compiler-makes-machine-code | published |
+| 2026-11-11 | how-process-and-thread-differ | published |
