@@ -27,7 +27,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How a compiler turns code into machine code
 - [x] How a process differs from a thread
 - [x] How a deadlock happens
-- [ ] How a file system finds your file
+- [x] How a file system finds your file
 - [ ] How UTF-8 stores text
 - [ ] Why 0.1 + 0.2 is not 0.3
 - [ ] How computers store negative numbers (two's complement)
@@ -72,3 +72,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-10 | how-a-compiler-makes-machine-code | published |
 | 2026-11-11 | how-process-and-thread-differ | published |
 | 2026-11-12 | how-a-deadlock-happens | published |
+| 2026-11-13 | how-a-file-system-finds-files | published |
