@@ -30,7 +30,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How a file system finds your file
 - [x] How UTF-8 stores text
 - [x] Why 0.1 + 0.2 is not 0.3
-- [ ] How computers store negative numbers (two's complement)
+- [x] How computers store negative numbers (two's complement)
 - [ ] How JPEG makes images small
 - [ ] How a cookie keeps you logged in
 - [ ] How CORS works
@@ -75,3 +75,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-13 | how-a-file-system-finds-files | published |
 | 2026-11-14 | how-utf-8-stores-text | published |
 | 2026-11-15 | how-floating-point-stores-0-1 | published |
+| 2026-11-16 | how-computers-store-negative-numbers | published |
