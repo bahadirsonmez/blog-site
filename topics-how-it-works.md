@@ -32,7 +32,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] Why 0.1 + 0.2 is not 0.3
 - [x] How computers store negative numbers (two's complement)
 - [x] How JPEG makes images small
-- [ ] How a cookie keeps you logged in
+- [x] How a cookie keeps you logged in
 - [ ] How CORS works
 - [ ] How rate limiting works (the token bucket)
 - [ ] How a message queue decouples two services
@@ -77,3 +77,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-15 | how-floating-point-stores-0-1 | published |
 | 2026-11-16 | how-computers-store-negative-numbers | published |
 | 2026-11-17 | how-jpeg-makes-images-small | published |
+| 2026-11-18 | how-cookies-keep-you-logged-in | published |
