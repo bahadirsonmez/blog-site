@@ -33,7 +33,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How computers store negative numbers (two's complement)
 - [x] How JPEG makes images small
 - [x] How a cookie keeps you logged in
-- [ ] How CORS works
+- [x] How CORS works
 - [ ] How rate limiting works (the token bucket)
 - [ ] How a message queue decouples two services
 - [ ] How a hash chain makes tampering visible
@@ -78,3 +78,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-16 | how-computers-store-negative-numbers | published |
 | 2026-11-17 | how-jpeg-makes-images-small | published |
 | 2026-11-18 | how-cookies-keep-you-logged-in | published |
+| 2026-11-19 | how-cors-works | published |
