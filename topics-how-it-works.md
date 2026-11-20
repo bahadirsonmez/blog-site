@@ -34,7 +34,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How JPEG makes images small
 - [x] How a cookie keeps you logged in
 - [x] How CORS works
-- [ ] How rate limiting works (the token bucket)
+- [x] How rate limiting works (the token bucket)
 - [ ] How a message queue decouples two services
 - [ ] How a hash chain makes tampering visible
 - [ ] How semantic versioning works
@@ -79,3 +79,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-17 | how-jpeg-makes-images-small | published |
 | 2026-11-18 | how-cookies-keep-you-logged-in | published |
 | 2026-11-19 | how-cors-works | published |
+| 2026-11-20 | how-rate-limiting-works | published |
