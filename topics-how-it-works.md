@@ -35,7 +35,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How a cookie keeps you logged in
 - [x] How CORS works
 - [x] How rate limiting works (the token bucket)
-- [ ] How a message queue decouples two services
+- [x] How a message queue decouples two services
 - [ ] How a hash chain makes tampering visible
 - [ ] How semantic versioning works
 - [ ] How CI builds and tests every push
@@ -80,3 +80,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-18 | how-cookies-keep-you-logged-in | published |
 | 2026-11-19 | how-cors-works | published |
 | 2026-11-20 | how-rate-limiting-works | published |
+| 2026-11-21 | how-a-message-queue-decouples-services | published |
