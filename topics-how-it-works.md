@@ -37,7 +37,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How rate limiting works (the token bucket)
 - [x] How a message queue decouples two services
 - [x] How a hash chain makes tampering visible
-- [ ] How semantic versioning works
+- [x] How semantic versioning works
 - [ ] How CI builds and tests every push
 - [ ] How copy-on-write works for Swift arrays
 - [ ] How SwiftUI knows what to redraw
@@ -82,3 +82,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-20 | how-rate-limiting-works | published |
 | 2026-11-21 | how-a-message-queue-decouples-services | published |
 | 2026-11-22 | how-a-hash-chain-shows-tampering | published |
+| 2026-11-23 | how-semantic-versioning-works | published |
