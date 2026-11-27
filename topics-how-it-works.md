@@ -40,7 +40,7 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 - [x] How semantic versioning works
 - [x] How CI builds and tests every push
 - [x] How copy-on-write works for Swift arrays
-- [ ] How SwiftUI knows what to redraw
+- [x] How SwiftUI knows what to redraw
 - [ ] How an iOS app goes from launch to background
 
 ## Log
@@ -85,3 +85,4 @@ Seed topics for the daily "How it works" series. The routine picks the first unc
 | 2026-11-23 | how-semantic-versioning-works | published |
 | 2026-11-25 | how-ci-tests-every-push | published |
 | 2026-11-26 | how-swift-arrays-copy-on-write | published |
+| 2026-11-27 | how-swiftui-knows-what-to-redraw | published |
